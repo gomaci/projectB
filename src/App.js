@@ -1,11 +1,34 @@
 import React from 'react';
 import './App.css';
+import {Link, Route} from "react-router-dom"
 //yarn add react-router-dom@5
+import Home from './component/home';
+import Sub1 from './component/sub1';
+import Sub2 from './component/sub2';
+import Sub3 from './component/sub3';
+import Sub4 from './component/sub4';
 
 function App() {
   return (
-    <div>
-     <h3 >테스트06</h3>
+    <div className='wrap'>
+      <header>
+        <h1><Link to="/">로고</Link></h1>
+        <nav>
+          <ul>
+            <li><Link to="/component/sub1">서브1</Link></li>
+            <li><Link to="/component/sub2">서브2</Link></li>
+            <li><Link to="/component/sub3">서브3</Link></li>
+            <li><Link to="/component/sub4">서브4</Link></li>
+          </ul>
+        </nav>
+      </header>
+      <div>
+        <Route path='/' exact={true} component={Home}/>
+        <Route path='/component/sub1' component={Sub1}/>
+        <Route path='/component/sub2' component={Sub2}/>
+        <Route path='/component/sub3' component={Sub3}/>
+        <Route path='/component/sub4' component={Sub4}/>
+      </div>
     </div>
   );
 }
