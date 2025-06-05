@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import {Link, Route} from "react-router-dom"
 //yarn add react-router-dom@5
+//yarn add styled-components
+
 import Home from './component/home';
 import Sub1 from './component/sub1';
 import Sub2 from './component/sub2';
@@ -11,16 +13,23 @@ import Sub4 from './component/sub4';
 function App() {
   return (
     <div className='wrap'>
-      <header>
-        <h1><Link to="/">로고</Link></h1>
-        <nav>
-          <ul>
-            <li><Link to="/component/sub1">서브1</Link></li>
-            <li><Link to="/component/sub2">서브2</Link></li>
-            <li><Link to="/component/sub3">서브3</Link></li>
-            <li><Link to="/component/sub4">서브4</Link></li>
-          </ul>
-        </nav>
+      <header className='header'>
+        <div>
+            <h1 className='logo'><Link to="/">로고</Link></h1>
+            <nav className='nav'>
+              <ul>
+                <li><Link to="/component/sub1">서브1</Link></li>
+                <li><Link to="/component/sub2">서브2</Link></li>
+                <li><Link to="/component/sub3">서브3</Link></li>
+                <li><Link to="/component/sub4">서브4</Link></li>
+              </ul>
+            </nav>
+            <ul className='infomn'>
+              <li><a href="">menu</a></li>
+              <li><a href="">menu</a></li>
+              <li><a href="">menu</a></li>
+            </ul>
+        </div>
       </header>
       <div>
         <Route path='/' exact={true} component={Home}/>
@@ -29,6 +38,9 @@ function App() {
         <Route path='/component/sub3' component={Sub3}/>
         <Route path='/component/sub4' component={Sub4}/>
       </div>
+      <footer className='footer'>
+
+      </footer>
     </div>
   );
 }
