@@ -7,7 +7,11 @@ ul,li{
   list-style: none;
 }
 
-a{text-decoration: none;}
+a,Link{text-decoration: none;}
+
+.mn{
+  text-decoration: none;
+}
 
 img{
   border:0px;

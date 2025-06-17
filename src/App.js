@@ -20,8 +20,8 @@ function App() {
               </Link></h1>
             <nav className='nav'>
               <ul>
-                <li><Link to="/component/sub1">서브1</Link></li>
-                <li><Link to="/component/sub2">서브2</Link></li>
+                <li style={{textDecoration:'none'}}><Link to="/component/sub1">서브1</Link></li>
+                <li className='mn'><Link to="/component/sub2">서브2</Link></li>
                 <li><Link to="/component/sub3">서브3</Link></li>
                 <li><Link to="/component/sub4">서브4</Link></li>
               </ul>
